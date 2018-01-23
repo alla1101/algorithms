@@ -1,6 +1,9 @@
 Project was made on ubuntu, linux
 
 to compile: 
-gcc -o <BinaryfileName> <CFileName>.c
+
+	make CFileName
+
 Type the command to run the code:
-./<BinaryfileName>
+
+	./CFileName
