@@ -24,6 +24,12 @@ struct person *Person_Create(char *name,int age, int height, int weight){
 
 	assert(who != NULL);
 
+	/*
+	somehow, if assert was false, it returns with an explanation of why it
+	exited the code, along with which function it was executed at, which
+	is awesome.
+	*/
+	
 	who->name=strdup(name);
 
 	/*
