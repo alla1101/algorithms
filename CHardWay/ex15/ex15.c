@@ -1,6 +1,6 @@
 /* 
 	experiment 17: heap and stack Memory allocation
-	
+
 	in this program, we're going to take a huge leap in 
 	difficulty ... A program to manage a Database.
 
@@ -200,11 +200,13 @@ void Database_Set(struct Connection *conn, int id, char *name, char *email){
 	addr->set=1;
 
 	//warining: there will be bugs
-	char *res=strncpy(addr->name,name,MAX_DATA);
+	char *res=strncpy(addr->name,name,MAX_DATA-1);
+	addr->name[MAX_DATA-1]=name[MAX_DATA-1];
 	//demonstrate the strncpy bug
 	if(!res){	die("Name coping failed"); }
 
-	res=strncpy(addr->email,email, MAX_DATA);
+	res=strncpy(addr->email,email, MAX_DATA-1);
+	addr->email[MAX_DATA-1]=email[MAX_DATA-1];
 
 	if(!res){	die("email coping failed"); }
 
