@@ -8,7 +8,7 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>
-
+//alla
 // creating a fake type for function pointer
 
 typedef int (*compare_cb)(int a,int b);
