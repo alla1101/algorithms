@@ -201,12 +201,12 @@ void Database_Set(struct Connection *conn, int id, char *name, char *email){
 
 	//warining: there will be bugs
 	char *res=strncpy(addr->name,name,MAX_DATA-1);
-	addr->name[MAX_DATA-1]=name[MAX_DATA-1];
+	addr->name[MAX_DATA-1]='\0';
 	//demonstrate the strncpy bug
 	if(!res){	die("Name coping failed"); }
 
 	res=strncpy(addr->email,email, MAX_DATA-1);
-	addr->email[MAX_DATA-1]=email[MAX_DATA-1];
+	addr->email[MAX_DATA-1]='\0';
 
 	if(!res){	die("email coping failed"); }
 
